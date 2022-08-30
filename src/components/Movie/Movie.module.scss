@@ -1,0 +1,31 @@
+.movie-main {
+  width: 250px;
+  height: 463px;
+}
+img {
+  width: 215px;
+  height: 326px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+  margin-top: 10px;
+  .rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0.35;
+  }
+  .trailer {
+    background: #8a51e7;
+    border-radius: 6px;
+    width: 126px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 12.5px;
+  }
+}
