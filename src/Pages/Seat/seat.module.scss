@@ -1,0 +1,90 @@
+.seatMain {
+  position: relative;
+  background: linear-gradient(180deg, #8a51e7 0%, #030303 29.87%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #fff !important;
+  height: 100vh;
+  h2 {
+    color: #fff;
+  }
+  .seatHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .backIcon {
+    }
+  }
+}
+.mask {
+  height: 100vh;
+}
+
+.seatModalmain {
+  width: 300px;
+  height: 240px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 16px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    180deg,
+    #8a51e7 0%,
+    #371968 53.93%,
+    #1c1626 94.04%
+  );
+  /* Border/Main */
+
+  border: 1px solid rgba(109, 158, 255, 0.1);
+  /* Blur / Glass */
+
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 16px;
+}
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+  height: 144px;
+
+  overflow: none;
+  .modalItem {
+    align-content: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #1c1626;
+    width: 100%;
+  }
+  .modalItem:active {
+    background-color: #371968;
+  }
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff !important;
+  width: 100%;
+  h3 {
+    color: #fff;
+  }
+}
+.okButton {
+  display: flex;
+  justify-content: right;
+
+  width: 100%;
+}
+.seats {
+}
+.modalMain {
+  position: absolute;
+  left: 11%;
+  top: 30%;
+  z-index: 2;
+}
