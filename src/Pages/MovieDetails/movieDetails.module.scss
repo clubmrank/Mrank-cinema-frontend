@@ -1,0 +1,44 @@
+.movieMain {
+  position: relative;
+  background: linear-gradient(180deg, #8a51e7 0%, #030303 29.87%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #fff !important;
+  height: 100vh;
+
+  h2 {
+    color: #fff;
+  }
+  .seatHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .backIcon {
+    }
+  }
+  .movieDetailsCont {
+    margin-top: 30px;
+    padding: 0 30px;
+    .table {
+      margin-top: 25px;
+      .tableRow {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        p {
+          flex: 0.5;
+          &:first-child {
+            color: #637394;
+          }
+        }
+      }
+    }
+  }
+  .confirmButton {
+    width: 70%;
+    justify-content: center;
+    height: 52px;
+    margin: 30px auto;
+    font-weight: 500;
+    font-size: 30px;
+  }
+}
