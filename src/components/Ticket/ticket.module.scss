@@ -1,0 +1,64 @@
+.ticketMain {
+  width: 100vw;
+  overflow: hidden;
+  width: 200px;
+  height: 100vh;
+  .ticketCont {
+    width: 200px;
+    height: 420px;
+    h2 {
+      color: #000000;
+    }
+    .digitalTicket {
+      .ticketTop {
+        border-radius: 12px;
+        background-color: #fff8eb;
+        border: 1.08123px solid #000000;
+        .ticketImg {
+          width: 85%;
+          margin: auto;
+
+          img {
+            width: 100%;
+            object-fit: contain;
+            margin-top: 0;
+          }
+        }
+      }
+      .ticketBottom {
+        background-color: #fff8eb;
+        border-radius: 12px;
+
+        .movieName {
+          display: flex;
+          justify-content: center;
+          color: #000000;
+          flex-flow: column;
+          align-items: center;
+          p {
+            margin-top: -15px;
+          }
+        }
+        .midText {
+          display: flex;
+          margin: 0 10px;
+          justify-content: space-between;
+          p {
+            color: #767676;
+            span {
+              color: #000000;
+            }
+          }
+        }
+        .barcode {
+        }
+      }
+    }
+    .downloadTicket {
+      //   background-color: red;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
