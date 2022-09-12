@@ -10,7 +10,7 @@ import Payment from "./Pages/PaymentDetails/Payment";
 function App() {
   return (
     <div className="App">
-      <HeaderCustom />
+      {/* <HeaderCustom /> */}
       <Home />
     </div>
   );

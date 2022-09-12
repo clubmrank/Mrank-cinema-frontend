@@ -1,10 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Barcode from "react-barcode";
 import styles from "./ticket.module.scss";
 import imgExample from "../../assets/images/black-widow.jpg";
 import { Button } from "antd";
 import { ImSpinner9 } from "react-icons/im";
-import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useReactToPrint } from "react-to-print";
 import html2canvas from "html2canvas";
@@ -12,6 +11,11 @@ import { jsPDF } from "jspdf";
 
 const Ticket = ({ user, seat }) => {
   const componentRef = useRef();
+  const [val, setVal] = useState(
+    `${user.movie_id}${seat}${Math.floor(
+      10000000000 + Math.random() * 90000000
+    )}`
+  );
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
     documentTitle: "ticket",
@@ -29,9 +33,9 @@ const Ticket = ({ user, seat }) => {
 
   console.log(user);
   const [movie, setMovie] = useState();
-  const val = `${user.movie_id}${seat}${Math.floor(
-    10000000000 + Math.random() * 90000000
-  )}`;
+  // const val = `${user.movie_id}${seat}${Math.floor(
+  //   10000000000 + Math.random() * 90000000
+  // )}`;
   const todaysDate = new Date();
   const params = useParams();
 
@@ -54,7 +58,7 @@ const Ticket = ({ user, seat }) => {
                 movie[0].poster ? (
                   <img src={movie[0].poster} alt="movie poster" />
                 ) : (
-                  <ImSpinner9 />
+                  ""
                 )
               ) : (
                 <h2>
