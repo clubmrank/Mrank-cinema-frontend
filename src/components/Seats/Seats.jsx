@@ -26,7 +26,7 @@ const Seats = () => {
 
   const proceed = async (e) => {
     e.preventDefault();
-    console.log("proceed");
+
     navigate(`${location.pathname}/confirmTicket/${params.id}`, {
       state: [booked, time],
     });
@@ -229,6 +229,7 @@ const Seats = () => {
             height: "100%",
             margin: "auto",
           }}
+          disabled={time == null || booked.length == 0 ? true : false}
           onClick={proceed}
         >
           Proceed
