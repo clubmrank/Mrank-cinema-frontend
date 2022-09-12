@@ -215,7 +215,7 @@ const Seats = () => {
         </div>
         <div className={styles.timeBtn}>
           <Button type="default" onClick={() => handleTime(8)}>
-            19:00
+            20:00
           </Button>
         </div>
       </div>
