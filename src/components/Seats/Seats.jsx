@@ -34,7 +34,7 @@ const Seats = () => {
 
   const handleTime = async (e) => {
     setTime(e);
-    await fetch("http://localhost:4231/api/seats", {
+    await fetch("https://api-club-mrank.herokuapp.com/api/seats", {
       headers: { "Content-Type": "application/json" },
       method: "post",
       body: JSON.stringify({

@@ -25,7 +25,7 @@ const ClientDetails = () => {
     console.log(location.state[0]);
 
     location.state[0].forEach(async (elem) => {
-      await fetch("http://localhost:4231/api/movie", {
+      await fetch("https://api-club-mrank.herokuapp.com/api/movie", {
         headers: { "Content-Type": "application/json" },
         method: "post",
         body: JSON.stringify({

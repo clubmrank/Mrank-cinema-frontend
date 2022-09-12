@@ -36,7 +36,7 @@ const Ticket = ({ user, seat }) => {
   const params = useParams();
 
   useEffect(() => {
-    const response = fetch("http://localhost:4231/api/movies")
+    const response = fetch("https://api-club-mrank.herokuapp.com/api/movies")
       .then((res) => res.json())
       .then((data) => {
         data = data.filter((elem) => elem.id == params.id);
