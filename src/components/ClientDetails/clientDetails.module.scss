@@ -1,0 +1,168 @@
+.names {
+  display: flex;
+  flex-flow: column;
+}
+.personalInf {
+  display: flex;
+}
+.credit_card {
+  width: 360px;
+  height: 550px;
+  margin: 60px auto 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.1);
+  color: #5e6977;
+}
+.form_header {
+  height: 60px;
+  padding: 20px 30px 0;
+  border-bottom: 1px solid #e1e8ee;
+}
+.title {
+  font-size: 18px;
+  margin: 0;
+  color: #5e6977;
+}
+/* Common */
+.card_number,
+.cvv_input input,
+.month select,
+.name,
+.year select {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 14px;
+}
+
+.card_number,
+.month select,
+.year select {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 14px;
+}
+.name,
+.surname {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border: 2px solid #e1e8ee;
+  border-radius: 6px;
+}
+.card_number,
+.email {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border: 2px solid #e1e8ee;
+  border-radius: 6px;
+}
+
+/* Date Field */
+.month select,
+.year select {
+  width: 145px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border: 2px solid #e1e8ee;
+  border-radius: 6px;
+  background: url("caret.png") no-repeat;
+  background-position: 85% 50%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.month select {
+  float: left;
+}
+
+.year select {
+  float: right;
+}
+.card_number,
+.cvv_details,
+.cvv_input input,
+.month select,
+.year select {
+  opacity: 0.7;
+  color: #86939e;
+}
+.form_body {
+  height: 340px;
+  padding: 30px 30px 20px;
+}
+//form validation
+.cvv_input input {
+  float: left;
+  width: 145px;
+  padding-left: 20px;
+  border: 2px solid #e1e8ee;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.cvv_details {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 16px;
+  float: right;
+  margin-bottom: 20px;
+}
+
+.cvv_details p {
+  margin-top: 6px;
+}
+// paypal btn
+.proceed_btn {
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  border-color: transparent;
+  border-radius: 6px;
+}
+
+.proceed_btn {
+  margin-bottom: 10px;
+  background: #7dc855;
+}
+
+.paypal-btn a,
+.proceed_btn a {
+  text-decoration: none;
+}
+
+.proceed_btn a {
+  color: #fff;
+}
+
+.paypal-btn a {
+  color: rgba(242, 242, 242, 0.7);
+}
+
+.paypal-btn {
+  padding-right: 95px;
+  // background: url('paypal-logo.svg') no-repeat 65% 56% #009cde;
+}
+
+/* Date Field */
+.month select,
+.year select {
+  width: 145px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border: 2px solid #e1e8ee;
+  border-radius: 6px;
+  background: url("caret.png") no-repeat;
+  background-position: 85% 50%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.month select {
+  float: left;
+}
+
+.year select {
+  float: right;
+}

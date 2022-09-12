@@ -27,4 +27,15 @@
 }
 .seatsMain {
   margin-top: 70px;
+  position: relative;
+}
+.proceedBtn {
+  display: flex;
+  margin: 20px auto;
+}
+.timeBtns {
+  display: flex;
+  margin: auto;
+  width: 70%;
+  justify-content: space-around;
 }

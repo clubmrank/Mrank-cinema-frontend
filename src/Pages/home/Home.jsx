@@ -5,6 +5,7 @@ import { Input, Space } from "antd";
 import { BsSearch } from "react-icons/bs";
 import "antd/dist/antd.css";
 import Corousel from "../../components/Slider/Corousel";
+import { Outlet } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -17,7 +18,6 @@ const Home = () => {
         <input placeholder="Search" type="search" />
         <BsSearch />
       </div>
-
       <div className={styles.home_slider}>
         <Corousel />
       </div>

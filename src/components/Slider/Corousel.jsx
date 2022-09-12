@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import styles from "./Corousel.module.scss";
 import Movie from "../Movie/Movie";
-import movies from "../../data/MoviesData/MoviesData";
+
 const Corousel = () => {
+  const [movies, setMovies] = useState();
   const settings = {
     infinite: true,
     speed: 500,
@@ -13,13 +14,25 @@ const Corousel = () => {
     slidesToScroll: 1,
   };
 
+  useEffect(() => {
+    const response = fetch("http://localhost:4231/api/movies")
+      .then((res) => res.json())
+      .then((data) => {
+        setMovies(data);
+      });
+  }, []);
   return (
     <div>
       <h2 style={{ color: "#fff" }}> Featured Movies</h2>
       <Slider {...settings}>
-        {movies.map((movie) => (
+        {movies?.map((movie) => (
           <div>
-            <Movie movieName={movie.name} image={movie.img} rate={movie.rate} />
+            <Movie
+              movieName={movie.name}
+              image={movie.poster}
+              rate={"10"}
+              movieId={movie.id}
+            />
           </div>
         ))}
       </Slider>

@@ -1,0 +1,26 @@
+.movieDetailsCont {
+  margin-top: 30px;
+  padding: 0 30px;
+  .table {
+    margin-top: 25px;
+    .tableRow {
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
+      p {
+        flex: 0.5;
+        &:first-child {
+          color: #637394;
+        }
+      }
+    }
+  }
+}
+.confirmButton {
+  width: 70%;
+  justify-content: center;
+  height: 52px;
+  margin: 30px auto;
+  font-weight: 500;
+  font-size: 30px;
+}

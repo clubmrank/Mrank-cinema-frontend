@@ -8,20 +8,25 @@ import { BsFillCreditCardFill } from "react-icons/bs";
 import { FaCcApplePay } from "react-icons/fa";
 import { FaApplePay } from "react-icons/fa";
 import { GiWallet } from "react-icons/gi";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
+import HeaderCustom from "../../components/Header/HeaderCustom";
 const PaymentSelection = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const params = useParams();
+  const [booking, setBooking] = useState({
+    movie_id: params.id,
+  });
+  console.log("selectPayment", location.state);
+  const proceed = (e) => {
+    e.preventDefault();
+    navigate(`${location.pathname}/payment`, { state: location.state });
+  };
+
   return (
     <div className={styles.paymentMain}>
-      <header className={styles.seatHeader}>
-        <div className={styles.backIcon}>
-          <IoIosArrowRoundBack size="50px" />
-        </div>
-        <div className={styles.middleText}>
-          <h2>Payment Selection </h2>
-        </div>
-        <div className={styles.calandericon}>
-          {/* <BsCalendar4 size="20px" onClick={showModal} /> */}
-        </div>
-      </header>
+      <HeaderCustom calander={false} text="Select Payment Option" />
       <div className={styles.paymentCont}>
         <form action="">
           <div className={styles.paymentOptions}>
@@ -75,28 +80,6 @@ const PaymentSelection = () => {
               </div>
               <div className={styles.right}>
                 <div className={styles.paymentIcon}>
-                  <FaApplePay
-                    size="large"
-                    style={{
-                      height: "100%",
-                      margin: "0",
-                      width: "25%",
-                    }}
-                    color="#000"
-                    width="1005"
-                  />
-                </div>
-                <div className={styles.paymentText}>
-                  <p> Pay Via apple Pay</p>
-                </div>
-              </div>
-            </div>
-            <div className={styles.paymentOption}>
-              <div className={styles.inputRadio}>
-                <input type="radio" name="payment" />
-              </div>
-              <div className={styles.right}>
-                <div className={styles.paymentIcon}>
                   <GiWallet
                     size="md"
                     style={{
@@ -117,6 +100,7 @@ const PaymentSelection = () => {
           <div className={styles.proceedButton}>
             <Button
               type="submit"
+              onClick={proceed}
               style={{
                 width: "80%",
                 color: "#fff",
